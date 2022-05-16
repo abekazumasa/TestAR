@@ -12,18 +12,18 @@
     </head>
     <body style="margin : 0px; overflow: hidden;">
         
-        <a-scene markers_start embedded arjs="debugUIEnabled:false; trackingMethod:best;patternRatio:0.50; trackingMethod: best;" vr-mode-ui="enabled: false" renderer="gammaOutput: true" >
+        <a-scene markers_start embedded arjs="debugUIEnabled: false; trackingMethod: best; patternRatio: 0.50; trackingMethod: best;" vr-mode-ui="enabled: false" renderer="gammaOutput: true" >
             <a-assets>
                 <a-asset-item id="testObj" src="./lib/Model/Object1.glb"></a-asset-item>
             </a-assets>
-            <a-marker type="pattern" url="./lib/Marker/pattern-0.patt" id="Marker_0" registerevents>
-                <a-entity gltf-model="#testObj" id="Object_1" position="0 0 0" animation-mixer></a-entity>
+            <a-marker type="pattern"  url="./lib/Marker/pattern-0.patt" smooth='true' id="Marker_0" registerevents>
+                <a-entity gltf-model="#testObj" id="Object_1" position="-2 0 0" animation-mixer></a-entity>
             </a-marker>
-            <a-marker type="pattern" url="./lib/Marker/pattern-1.patt" id="Marker_1" registerevents>
-                <a-entity gltf-model="#testObj" id="Object_2" position="0 0 0" rotation="90 0 0" animation-mixer></a-entity>
+            <a-marker type="pattern" url="./lib/Marker/pattern-1.patt" smooth='true' id="Marker_1" registerevents>
+                <a-entity gltf-model="#testObj" id="Object_2" position="0 -0.5 2" rotation="90 0 0" animation-mixer></a-entity>
             </a-marker>
-            <a-marker type="pattern" url="./lib/Marker/pattern-2.patt" id="Marker_2" registerevents>
-                <a-entity gltf-model="#testObj" id="Object_3" position="0 -11 3" rotation="0 0 -90" animation-mixer></a-entity>
+            <a-marker type="pattern" url="./lib/Marker/pattern-2.patt" smooth='true' id="Marker_2" registerevents>
+                <a-entity gltf-model="#testObj" id="Object_3" position="2 0 -1" rotation="0 0 -90" animation-mixer></a-entity>
             </a-marker>
             <a-entity camera ></a-entity>
         </a-scene>
