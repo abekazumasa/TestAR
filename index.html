@@ -8,6 +8,7 @@
         <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+        <script src="./lib/src/index.js"></script>
         
     </head>
     <body style="margin : 0px; overflow: hidden;">
@@ -15,6 +16,7 @@
         <a-scene markers_start embedded arjs="debugUIEnabled: false; trackingMethod: best; patternRatio: 0.50; trackingMethod: best;" vr-mode-ui="enabled: false" renderer="gammaOutput: true" >
             <a-assets>
                 <a-asset-item id="testObj" src="./lib/Model/Object1.glb"></a-asset-item>
+                <a-asset-item id="testObj_1" src="./lib/Model/Object2.glb"></a-asset-item>
             </a-assets>
             <a-marker type="pattern"  url="./lib/Marker/pattern-0.patt" smooth='true' id="Marker_0" registerevents>
                 <a-entity gltf-model="#testObj" id="Object_1" position="-2 0 0" animation-mixer></a-entity>
@@ -26,6 +28,7 @@
                 <a-entity gltf-model="#testObj" id="Object_3" position="2 0 -1" rotation="0 0 -90" animation-mixer></a-entity>
             </a-marker>
             <a-entity camera ></a-entity>
+            <a-entity run></a-entity>
         </a-scene>
     </body>
 </html>
